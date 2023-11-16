@@ -1,5 +1,6 @@
 var generateBtn = document.getElementById("generate");
 
+
 function writePassword() {
  var password = generatePassword();
  var passwordText = document.getElementById("password");
@@ -9,15 +10,27 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
- var length = parseInt(prompt("Please enter amount of characters you need (between 8 and 128 characters):"));
+ var length;
+
+//given this code by bcs Xpert
+while (true) {
+    length = parseInt(prompt("Please enter the number of characters you need (between 8 and 128 characters):"));
+    
+if (length > 8 || length < 128) {
+    break; // Break out of the loop if the input is within the correct range
+    
+    alert("Please enter a number between 8 and 128!"); 
+}
+
  var includeLowercase = confirm("Press OK to include lowercase characters?");
  var includeUppercase = confirm("Press OK to include uppercase characters?");
  var includeNumeric = confirm("Press OK to include numeric characters?");
  var includeSpecial = confirm("Press OK to include special characters?");
- var password = generateRandomPassword(length, includeLowercase, includeUppercase, includeNumeric, includeSpecial);
 
- return password;
-}
+ var password = generateRandomPassword(length, includeLowercase, includeUppercase, includeNumeric, includeSpecial);
+  
+    return password;
+
 
 function generateRandomPassword(length, includeLowercase, includeUppercase, includeNumeric, includeSpecial) {
  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
@@ -33,6 +46,7 @@ function generateRandomPassword(length, includeLowercase, includeUppercase, incl
  if (includeNumeric) allChars += numericChars;
  if (includeSpecial) allChars += specialChars;
 
+ //got help from ai feature
  for (var i = 0; i < length; i++) {
    var randomIndex = Math.floor(Math.random() * allChars.length);
    password += allChars.charAt(randomIndex);
