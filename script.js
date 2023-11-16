@@ -1,6 +1,5 @@
 var generateBtn = document.getElementById("generate");
 
-
 function writePassword() {
  var password = generatePassword();
  var passwordText = document.getElementById("password");
