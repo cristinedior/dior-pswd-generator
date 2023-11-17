@@ -48,6 +48,8 @@ THEN the password is either displayed in an alert or written to the page
 
 ## Screenshot of Generated Password Deployment
 
+Deployed Site: https://cristinedior.github.io/dior-pswd-generator/
+
 ![127 0 0 1_5500_prework-study-guide_prework-study-guide_dior-pswd-generator_index html](https://github.com/cristinedior/dior-pswd-generator/assets/148567509/5faa2a8b-deac-41d9-afe4-2ebf5fa2e58c)
 
 ## License
