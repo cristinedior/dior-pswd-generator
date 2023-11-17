@@ -10,18 +10,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
- var length;
-
-//given this code by bcs Xpert
-while (true) {
-    length = parseInt(prompt("Please enter the number of characters you need (between 8 and 128 characters):"));
-    
-if (length > 8 || length < 128) {
-    break; // Break out of the loop if the input is within the correct range
-    
-    alert("Please enter a number between 8 and 128!"); 
-}
-
+ var length = parseInt(prompt("Enter the password length (between 8 and 128 characters):"));
  var includeLowercase = confirm("Press OK to include lowercase characters?");
  var includeUppercase = confirm("Press OK to include uppercase characters?");
  var includeNumeric = confirm("Press OK to include numeric characters?");
@@ -29,8 +18,8 @@ if (length > 8 || length < 128) {
 
  var password = generateRandomPassword(length, includeLowercase, includeUppercase, includeNumeric, includeSpecial);
   
-    return password;
-
+return password;
+}
 
 function generateRandomPassword(length, includeLowercase, includeUppercase, includeNumeric, includeSpecial) {
  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
