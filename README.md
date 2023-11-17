@@ -48,7 +48,7 @@ THEN the password is either displayed in an alert or written to the page
 
 ## Screenshot of Generated Password Deployment
 
-
+![127 0 0 1_5500_prework-study-guide_prework-study-guide_dior-pswd-generator_index html](https://github.com/cristinedior/dior-pswd-generator/assets/148567509/5faa2a8b-deac-41d9-afe4-2ebf5fa2e58c)
 
 ## License
 This Study Guide Web Application is licensed under the [MIT License](link-to-license). You are free to use, modify, and distribute it for educational purposes.
